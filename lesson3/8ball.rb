@@ -29,4 +29,5 @@ answers = [
 	"Весьма сомнительно"
 ]
 
+# выводим случайный эллемент массива answers
 puts answers.sample
