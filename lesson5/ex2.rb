@@ -1,17 +1,13 @@
 # encoding: utf-8
 
-puts "Даров! Введи первое число"
+puts "Даров! Почем сейчас бакс?"
 
-num1 = gets.chomp.to_i
+a = gets.to_i
 
-puts "Введи второе число"
+puts "А сколько у тебя есть?"
 
-num2 = gets.chomp.to_i
+b = gets.to_i
 
-puts "Теперь третье число"
+c = a * b
 
-num3 = gets.chomp.to_i
-
-average = (num1 + num2 + num3) / 3
-
-puts "Среднее арифметическое число " + average.to_s
+puts "Твои запасы " + c.to_s
