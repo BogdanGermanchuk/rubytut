@@ -8,6 +8,6 @@ puts "А сколько у тебя есть?"
 
 b = gets.to_i
 
-c = a * b
+c = b / a
 
-puts "Твои запасы " + c.to_s
+puts "Твои запасы $" + c.to_s
