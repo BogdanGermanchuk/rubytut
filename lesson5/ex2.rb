@@ -2,12 +2,12 @@
 
 puts "Даров! Почем сейчас бакс?"
 
-a = gets.to_i
+a = gets.to_f
 
 puts "А сколько у тебя есть?"
 
-b = gets.to_i
+b = gets.to_f
 
-c = b / a
+c.round(2) = b / a
 
 puts "Твои запасы $" + c.to_s
