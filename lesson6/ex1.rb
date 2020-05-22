@@ -1,4 +1,4 @@
-# encoding: utf-8
+
 
 # Создаем массив с мужскими именами
 masculine_names = ['Gena', 'George', 'Misha']
