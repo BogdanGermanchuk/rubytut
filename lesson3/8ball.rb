@@ -41,5 +41,5 @@ puts greetings.sample
 # Делаем пустую строку
 puts
 
-# выводим случайный эллемент массива answers
+# выводим случайный эллемент массива answer
 puts answers.sample
