@@ -4,22 +4,33 @@ puts "0 Камень"
 puts "1 Ножницы"
 puts "2 Бумага"
 
+abc = ["Камень", "Ножницы", "Бумага"]
+
 a = gets.to_i
 
-b = rand (0-2)
+b = rand(3)
 
 
 
-if b = 0
+puts 'Вы выбрали: ' + abc[a]
 
-	puts 'Вы выбрали: Камень'
+puts 'Компьютер выбрал: ' + abc[b]
+
+
+if b == a
+
+	puts 'Ничья'
+
+elsif a == 0 && b == 1
+	puts 'Победа'
+
+elsif a == 1 && b == 2
+	puts 'Победа'
+
+elsif a == 2 && b == 0
+	puts 'Победа'
 
 else
-if b = 1
-	puts 'Вы выбрали: Ножницы'
+	puts 'Вы проиграли'
 
-else
-if b = 2
-	puts 'Вы выбрали: Бумага'
-end
 end
