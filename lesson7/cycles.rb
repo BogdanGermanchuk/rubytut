@@ -1,10 +1,10 @@
 
-count = 1
+count = 5
 
-while count <= 5 do
+while count <= 45 do
 	puts count
-	count +=1
-	sleep 0.5
+	count +=2
+	sleep 0.3
 end
 
 puts 'Я иду искать!'
