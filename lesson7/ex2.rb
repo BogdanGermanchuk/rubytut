@@ -1,32 +1,3 @@
-
-arr = []
-
-puts 'Какой длины будет случайный массив?'
-
-a = gets.to_i
-
-b = rand(100)
-
-c = 0
-
-while c <= a do
-
-	arr << c
-
-	c += 1
-
-	sleep 0.15
-
-	puts c
-
-end
-
-puts 'Массив из чисел равен:'
-puts arr.to_s
-
-
-
-
 # encoding: utf-8
 
 # Объявили пустой массив
