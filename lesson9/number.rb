@@ -1,81 +1,41 @@
 # encoding: utf-8
 
+def check_number (guess, number)
 
+  if guess == number
+    puts 'Ура, вы выиграли!'
+    exit
+  end
 
+  if guess > number
+    puts 'Нужно меньше'
+  else
+    puts 'Нужно больше'
+  end
 
+  if (guess - number).abs < 3
+    puts 'Тепло'
+  else
+    puts 'Холодно'
+  end
 
+end
 
-
-
-
-
-
-
-
-# случайное число, которое будем отгадывать
 number = rand(17)
 
-puts 'загадано число от 0 до 16, отгадайте какое?'
+puts 'Загадано число от 0 до 16, отгадайте какое?'
 
-# преобразуем то, что ввел пользователь в целое число методом to_i
-proba = gets.chomp.to_i
+guess = gets.to_i
 
-if proba == number # если номер совпал
-  abort 'Ура, вы выиграли!' # завершаем программу
-else
-  # первый вложенный if, проверка в какую сторону ошибся пользователь
-  if proba > number
-    puts 'нужно меньше'
-  else
-    puts 'нужно больше'
-  end
+check_number(guess, number)
 
-  # второй вложенный if – вывод "тепло" или "холодно" 
-  if (proba - number).abs < 3
-    puts 'Тепло'
-  else
-    puts 'Холодно'
-  end
-end
+guess = gets.to_i
 
-# Далее еще 2 раза повторяем тот же самый код от строки 7 до строки 25,
-# а затем выводим прощальное сообщение.
+check_number(guess, number)
 
-# 2 раз
-proba = gets.chomp.to_i
-if proba == number
-  abort 'Ура, вы выиграли!'
-else
-  if proba > number
-    puts 'нужно меньше'
-  else
-    puts 'нужно больше'
-  end
+guess = gets.to_i
 
-  if (proba - number).abs < 3
-    puts 'Тепло'
-  else
-    puts 'Холодно'
-  end
-end
+check_number(guess, number)
 
-# 3 раз
-proba = gets.chomp.to_i
-if proba == number
-  abort 'Ура, вы выиграли!'
-else
-  if proba > number
-    puts 'нужно меньше'
-  else
-    puts 'нужно больше'
-  end
-
-  if (proba - number).abs < 3
-    puts 'Тепло'
-  else
-    puts 'Холодно'
-  end
-end
-
-# расскажем пользователю, что же было загадано
 puts 'В этот раз вам не повезло. Было загадано число ' + number.to_s
+
