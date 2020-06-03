@@ -1,9 +1,11 @@
 
 require "./methods.rb" 
 
+cls
+
 puts "Игра виселица, версия 1"
 
-letters = get_letters # todo
+letters = get_letters
 
 errors = 0
 
@@ -15,9 +17,9 @@ while errors < 7 do
 
 	puts "введите следующую букву"
 
-	user_input = get_user_input # todo
+	user_input = get_user_input
 
-	# todo
+	
 	result = check_result(user_input, letters, good_letters, bad_letters)
 
 	if (result == -1)
