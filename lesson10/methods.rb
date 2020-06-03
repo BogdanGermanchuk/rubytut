@@ -42,3 +42,37 @@ def check_result(user_input, letters, good_letters, bad_letters)
 		return -1
 	end	
 end
+
+def get_word_for_print(letters, good_letters)
+	result = ""
+
+	for letter in letters do
+		if good_letters.include? letter
+			result += letter + " "
+		else
+			result += "__ "
+		end
+	end
+	return result
+end
+
+
+def 	print_status(letters, good_letters, bad_letters,errors)
+	puts "\nСлово: " + get_word_for_print(letters, good_letters)
+
+	puts "Ошибки (#{errors}): #{bad_letters.join(", ")}"
+
+	if errors >= 7
+		puts "Вы проиграли :("
+	else
+		if letters.uniq.size == good_letters.size
+			puts "Поздравляем! Вы выйграли!\n\n"
+		else
+			puts "У вас осталось попыток: " + (7 - errors).to_s
+		end
+	end
+end
+
+def cls
+	system "clear" or system "cls"
+end
