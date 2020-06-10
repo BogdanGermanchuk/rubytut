@@ -1,6 +1,4 @@
 
-# encoding: utf-8
-
 # Подключаем класс Bridge из файла bridge.rb
 require 'bridge'
 
