@@ -75,7 +75,7 @@ while errors < 7
   # Проверяем введенную букву специальным методом check_result, которому тоже для
   # работы нужно знать все о состоянии игры: что ввел пользователь, какие буквы
   # есть в слове и какие буквы пользователь уже пробовал.
-  result = check_result(user_input, letters, good_letters, bad_letters)
+  result = check_input(user_input, letters, good_letters, bad_letters)
 
   # В зависимости от того, что вернул нам метод check_result, мы принимаем одно
   # из решений:
