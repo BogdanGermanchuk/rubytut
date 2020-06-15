@@ -1,4 +1,3 @@
-# encoding: utf-8
 
 # Подключаем к нашей программе класс BodyBuilder из файла (body_builder.rb)
 require_relative 'body_builder'
