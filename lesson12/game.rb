@@ -7,7 +7,7 @@ class Game
 		@errors = 0
 
 		@good_letters = []
-		@bad_letter = []
+		@bad_letters = []
 
 		@status = 0
 	end
@@ -19,6 +19,7 @@ class Game
 
 		return slovo.split("")
 	end
+end
 
 	def ask_next_letter
 		puts "\n Введите следующую букву"
@@ -51,7 +52,6 @@ class Game
 
 		else
 			@bad_letter << bukva
-
 			@errors += 1
 
 			if @errors >= 7
@@ -59,4 +59,24 @@ class Game
 			end
 		end
 	end
+
+	
+def status
+  return @status
+end
+
+def errors
+  return @errors
+end
+
+def letters
+  return @letters
+end
+
+def good_letters
+  return @good_letters
+end
+
+def bad_letters
+  return @bad_letters
 end
