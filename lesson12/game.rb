@@ -13,24 +13,15 @@ class Game
 	end
 
 	def get_letters(slovo)
-		if (slovo == nil || slovo == '')
+		if slovo == nil || slovo == ''
     	abort "Вы не ввели слово для игры!"
 	end
 
 		return slovo.split("")
 	end
-end
 
-	def ask_next_letter
-		puts "\n Введите следующую букву"
-
-		letter = ""
-
-		while letter == "" do
-			letter = STDIN.gets.encode("UTF-8").chomp
-		end
-
-		next_step(letter)
+	def status
+  	return @status
 	end
 
 	def next_step(bukva)
@@ -38,7 +29,7 @@ end
 			return
 		end
 
-		if @good_letters.include?(bukva) || @bad_letter.include?(bukva)
+		if @good_letters.include?(bukva) || @bad_letters.include?(bukva)
 			return
 		end
 
@@ -46,12 +37,12 @@ end
 
 			@good_letters << bukva
 
-			if @good_letters.size == @letters.uniq.size
+			if @good_letters.uniq.sort == @letters.uniq.sort
 				@status = 1
 			end
 
 		else
-			@bad_letter << bukva
+			@bad_letters << bukva
 			@errors += 1
 
 			if @errors >= 7
@@ -60,10 +51,19 @@ end
 		end
 	end
 
-	
-def status
-  return @status
+	def ask_next_letter
+		puts "\n Введите следующую букву"
+
+	letter = ""
+
+	while letter == ""
+		letter = STDIN.gets.encode("UTF-8").chomp
+	end
+
+	next_step(letter)
 end
+
+	
 
 def errors
   return @errors
@@ -79,4 +79,5 @@ end
 
 def bad_letters
   return @bad_letters
+end
 end
